@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://biw7e7th5h5c5"
+path.s3tc="res://.godot/imported/Untitled_Image_19.jpg-6e1af70b053f12a9d4b7a9b5a968b9c6.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "2d38a859507a13d86527b3118b5c437f"
+}
+
+[deps]
+
+source_file="res://abandoned-factory-remodelled-gameready/source/Untitled_Image_19.jpg"
+dest_files=["res://.godot/imported/Untitled_Image_19.jpg-6e1af70b053f12a9d4b7a9b5a968b9c6.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
