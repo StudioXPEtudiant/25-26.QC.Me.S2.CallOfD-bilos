@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0tx61s6fmgu3"]
-
-[ext_resource type="PackedScene" uid="uid://diskd364bqsp8" path="res://black_mesa_marine_soldier.glb" id="1_iwpo4"]
-
-[node name="CharacterBody3D" type="CharacterBody3D"]
-
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_iwpo4")]
-transform = Transform3D(1, 0, 0, 0, 0.063243404, 0.99799806, 0, -0.99799806, 0.063243404, -0.012749791, 0, -0.31332445)
