@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfhnujuib3yl8"]
+[gd_scene load_steps=3 format=3 uid="uid://bfhnujuib3yl8"]
 
 [ext_resource type="PackedScene" uid="uid://dchun8hunofx4" path="res://abandoned-factory-remodelled-gameready/source/Untitled.glb" id="1_gopdi"]
+[ext_resource type="PackedScene" uid="uid://clnotdh6vm4ka" path="res://Loic/tiger_russian_military_vehicle.glb" id="2_sxaik"]
 
 [node name="Node 3D" type="Node3D"]
 
 [node name="Untitled" parent="." instance=ExtResource("1_gopdi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0336404, -0.48684025, 2.0360227)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_sxaik")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -1.6865082, 0.64515543, 0.6113086)
