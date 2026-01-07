@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://21suelt74kit"]
+
+[ext_resource type="PackedScene" uid="uid://dolg8d0080y16" path="res://Lohann/fx-05-xiuhcoat-assault-rifle/source/FX-05_Packed_FBX.fbx" id="1_yawtq"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="FX-05_Packed_FBX" parent="." instance=ExtResource("1_yawtq")]
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 0, 0, 0)
