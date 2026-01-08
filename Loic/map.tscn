@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfhnujuib3yl8"]
+[gd_scene load_steps=5 format=3 uid="uid://bfhnujuib3yl8"]
 
 [ext_resource type="PackedScene" uid="uid://dchun8hunofx4" path="res://abandoned-factory-remodelled-gameready/source/Untitled.glb" id="1_gopdi"]
 [ext_resource type="PackedScene" uid="uid://bj8q7kdv5mctw" path="res://Loic/app_trnio_plus_test_voiture_arnaud (1).glb" id="2_hcjvg"]
 [ext_resource type="PackedScene" uid="uid://clnotdh6vm4ka" path="res://Loic/tiger_russian_military_vehicle.glb" id="2_sxaik"]
+[ext_resource type="PackedScene" uid="uid://cfc1g4njiq1dp" path="res://Loic/m3a1_scout_car.glb" id="4_vxxo8"]
 
 [node name="Node 3D" type="Node3D"]
 
@@ -11,5 +12,8 @@
 [node name="audi brisée" parent="." instance=ExtResource("2_hcjvg")]
 transform = Transform3D(0.66976005, 0.0011766097, 0.4375158, -0.007942617, 0.799898, 0.010007575, -0.43744516, -0.012722135, 0.66968626, 6.050411, -0.14475137, -2.1552844)
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_sxaik")]
+[node name="voiture militaire" parent="." instance=ExtResource("2_sxaik")]
 transform = Transform3D(-0.5022321, -0.004098873, 0.32824692, -0.0043732557, 0.59998333, 0.00080080953, -0.32824337, -0.0017221821, -0.50224817, -1.6314827, 0.76989424, 0.541686)
+
+[node name="camion militaire" parent="." instance=ExtResource("4_vxxo8")]
+transform = Transform3D(-0.49007556, 0, 0.34615883, 0, 0.59999996, 0, -0.34615883, 0, -0.49007556, -4.708847, -0.08848503, 12.432818)
