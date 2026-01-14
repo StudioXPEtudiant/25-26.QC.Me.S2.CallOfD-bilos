@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://c57pbpbcem6ns"]
+
+[ext_resource type="PackedScene" uid="uid://dchun8hunofx4" path="res://abandoned-factory-remodelled-gameready/source/Untitled.glb" id="1_wdqp8"]
+
+[node name="Untitled" instance=ExtResource("1_wdqp8")]
+
+[node name="Mesh_0_001" parent="Root Node/621803" index="2"]
+visible = false
+
+[node name="Sketchfab_model" parent="." index="1"]
+transform = Transform3D(2.1591988, 0, 0, 0, -7.721898e-07, 2.159199, 0, -2.159199, -7.721898e-07, -1.732083, 0.005589485, 13.026713)
+
+[node name="texcdfcda_LOD0_TIER3_000_MatID_1_0_003" parent="Sketchfab_model_001/Wooden_Pallet_texcdfcda_Low_fbx/RootNode_001/texcdfcda_LOD0_TIER3_000" index="3"]
+visible = false
+
+[node name="Cube_001" parent="." index="9"]
+transform = Transform3D(-1.8555481e-07, 0, 1.2974337, 0, 1.7108305, 0, -1.5565463, 0, -1.5466617e-07, 12.25677, 0.18031693, -3.3853998)
