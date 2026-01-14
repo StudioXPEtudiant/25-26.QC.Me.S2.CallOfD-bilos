@@ -1,0 +1,152 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv0g1tc1e3qt4"]
+
+[ext_resource type="PackedScene" uid="uid://c3qyd34sbt4d7" path="res://Loic/post-apocalyptic_buildings.glb" id="1_7ifob"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_7ifob")]
+
+[node name="Building #2 inner" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode" index="2"]
+visible = false
+
+[node name="Building #2 inner_Metal inner_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #2 inner" index="0"]
+visible = false
+
+[node name="Building #2 outer" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode" index="3"]
+visible = false
+
+[node name="Building #2 outer_paint B#2_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #2 outer" index="0"]
+visible = false
+
+[node name="Building #2 outer_paint B#2_02" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #2 outer" index="1"]
+visible = false
+
+[node name="Building #2 outer_Glass window_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #2 outer" index="2"]
+visible = false
+
+[node name="Building #2 outer_concrete inner_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #2 outer" index="3"]
+visible = false
+
+[node name="Building #2 outer_Metal bar_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #2 outer" index="4"]
+visible = false
+
+[node name="Building #2 outer_Metal_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #2 outer" index="5"]
+visible = false
+
+[node name="Building #2 outer_Metal_02" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #2 outer" index="6"]
+visible = false
+
+[node name="Building #3 inner" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode" index="4"]
+visible = false
+
+[node name="Building #3 inner_Metal inner_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #3 inner" index="0"]
+visible = false
+
+[node name="Building #3 outer" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode" index="5"]
+visible = false
+
+[node name="Building #3 outer_paint B#3_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #3 outer" index="0"]
+visible = false
+
+[node name="Building #3 outer_paint B#3_02" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #3 outer" index="1"]
+visible = false
+
+[node name="Building #3 outer_concrete inner_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #3 outer" index="2"]
+visible = false
+
+[node name="Building #3 outer_Metal bar_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #3 outer" index="3"]
+visible = false
+
+[node name="Building #3 outer_Metal_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #3 outer" index="4"]
+visible = false
+
+[node name="Building #3 outer_Metal_02" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #3 outer" index="5"]
+visible = false
+
+[node name="Building #3 outer_Glass window_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #3 outer" index="6"]
+visible = false
+
+[node name="Building #4 inner" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode" index="6"]
+visible = false
+
+[node name="Building #4 inner_Metal inner_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #4 inner" index="0"]
+visible = false
+
+[node name="Building #4 outer" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode" index="7"]
+visible = false
+
+[node name="Building #4 outer_paint B#4_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #4 outer" index="0"]
+visible = false
+
+[node name="Building #4 outer_paint B#4_02" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #4 outer" index="1"]
+visible = false
+
+[node name="Building #4 outer_concrete inner_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #4 outer" index="2"]
+visible = false
+
+[node name="Building #4 outer_Metal bar_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #4 outer" index="3"]
+visible = false
+
+[node name="Building #4 outer_Metal_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #4 outer" index="4"]
+visible = false
+
+[node name="Building #4 outer_Glass window_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #4 outer" index="5"]
+visible = false
+
+[node name="Building #5 inner" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode" index="8"]
+visible = false
+
+[node name="Building #5 inner_Metal inner_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #5 inner" index="0"]
+visible = false
+
+[node name="Building #5 outer" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode" index="9"]
+visible = false
+
+[node name="Building #5 outer_paint B#5_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #5 outer" index="0"]
+visible = false
+
+[node name="Building #5 outer_paint B#5_02" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #5 outer" index="1"]
+visible = false
+
+[node name="Building #5 outer_concrete inner_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #5 outer" index="2"]
+visible = false
+
+[node name="Building #5 outer_Metal bar_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #5 outer" index="3"]
+visible = false
+
+[node name="Building #5 outer_Metal_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #5 outer" index="4"]
+visible = false
+
+[node name="Building #5 outer_Metal_02" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #5 outer" index="5"]
+visible = false
+
+[node name="Building #5 outer_Glass window_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #5 outer" index="6"]
+visible = false
+
+[node name="Building #6 inner" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode" index="10"]
+visible = false
+
+[node name="Building #6 inner_Metal inner_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #6 inner" index="0"]
+visible = false
+
+[node name="Building #6 outer" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode" index="11"]
+visible = false
+
+[node name="Building #6 outer_paint B#6_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #6 outer" index="0"]
+visible = false
+
+[node name="Building #6 outer_paint B#6_02" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #6 outer" index="1"]
+visible = false
+
+[node name="Building #6 outer_concrete inner_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #6 outer" index="2"]
+visible = false
+
+[node name="Building #6 outer_Metal bar_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #6 outer" index="3"]
+visible = false
+
+[node name="Building #6 outer_Metal_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #6 outer" index="4"]
+visible = false
+
+[node name="Building #6 outer_Metal_02" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #6 outer" index="5"]
+visible = false
+
+[node name="Building #6 outer_Glass window_0" parent="Sketchfab_model/8ea3f6bd21e647838a6a99792626da02_fbx/RootNode/Building #6 outer" index="6"]
+visible = false
