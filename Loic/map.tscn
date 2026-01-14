@@ -7,6 +7,7 @@
 [node name="Node 3D" type="Node3D"]
 
 [node name="Untitled" parent="." instance=ExtResource("1_gopdi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0016355515, -0.008806467, 0.0015602112)
 
 [node name="audi brisée" parent="." instance=ExtResource("2_hcjvg")]
 transform = Transform3D(0.66976005, 0.0011766097, 0.4375158, -0.007942617, 0.799898, 0.010007575, -0.43744516, -0.012722135, 0.66968626, 6.050411, -0.14475137, -2.1552844)
