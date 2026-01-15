@@ -10,6 +10,7 @@
 
 [node name="Untitled" parent="." instance=ExtResource("1_gopdi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0016355515, -0.008806467, 0.0015602112)
+
 [node name="Factory" parent="." instance=ExtResource("1_gopdi")]
 
 [node name="voiture militaire" parent="." instance=ExtResource("2_sxaik")]

@@ -4,5 +4,5 @@
 
 [node name="Node3D" type="Node3D"]
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_wrtkd")]
+[node name="Clavier" parent="." instance=ExtResource("1_wrtkd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010495007, 0, -0.11175394)

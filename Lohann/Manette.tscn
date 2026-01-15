@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://bwjp6rsslf80g"]
+[gd_scene load_steps=2 format=3 uid="uid://bwjp6rsslf80g"]
+
+[ext_resource type="PackedScene" uid="uid://cwxhu1q32druq" path="res://Lohann/Perso manette/sand_soldier_outdated.glb" id="1_tvvqf"]
 
 [node name="Node3D" type="Node3D"]
+
+[node name="Manette" parent="." instance=ExtResource("1_tvvqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006655216, 0, 0.028843164)
