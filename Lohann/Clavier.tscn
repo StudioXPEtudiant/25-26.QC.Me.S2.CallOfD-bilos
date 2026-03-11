@@ -1,8 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://466nd6owy55p"]
+[gd_scene load_steps=3 format=3 uid="uid://466nd6owy55p"]
 
 [ext_resource type="PackedScene" uid="uid://dwv4gye0k6ok2" path="res://Lohann/Perso clavier/forest_soldier_outdated.glb" id="1_wrtkd"]
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wrtkd"]
+radius = 0.3
+height = 1.45
 
-[node name="Clavier" parent="." instance=ExtResource("1_wrtkd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010495007, 0, -0.11175394)
+[node name="Player clavier" type="Node3D"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
+[node name="Asset clavier" parent="." instance=ExtResource("1_wrtkd")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.010421129, 0.6567247, 0.0042909384)
+shape = SubResource("CapsuleShape3D_wrtkd")
+
+[node name="Tête" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Tête"]
+transform = Transform3D(-1.4285717, 0, -1.2488971e-07, 0, 1.4285716, 0, 1.2488971e-07, 0, -1.4285717, 0, 0, 0)
+current = true
+near = 0.09
+far = 150.0
