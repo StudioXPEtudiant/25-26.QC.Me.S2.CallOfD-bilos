@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfhnujuib3yl8"]
+[gd_scene load_steps=8 format=3 uid="uid://bfhnujuib3yl8"]
 
 [ext_resource type="PackedScene" uid="uid://dchun8hunofx4" path="res://abandoned-factory-remodelled-gameready/source/Untitled.glb" id="1_gopdi"]
 [ext_resource type="PackedScene" uid="uid://clnotdh6vm4ka" path="res://Loic/tiger_russian_military_vehicle.glb" id="2_sxaik"]
@@ -6,10 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://5v7ajodv733o" path="res://Loic/old_rusty_car.glb" id="4_wr7ml"]
 [ext_resource type="PackedScene" uid="uid://2ui6o8e87eix" path="res://Loic/abandoned_house.glb" id="5_wr7ml"]
 [ext_resource type="PackedScene" uid="uid://d4j1jgq733m2h" path="res://Loic/brooklyn_street_row_buildings_low_poly.glb" id="6_is8ac"]
+[ext_resource type="PackedScene" uid="uid://466nd6owy55p" path="res://Lohann/Clavier.tscn" id="7_olsyl"]
 
 [node name="Node 3D" type="Node3D"]
 
 [node name="Factory" parent="." instance=ExtResource("1_gopdi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04287508, 0.029644012, 0.0016169548)
 
 [node name="voiture militaire" parent="." instance=ExtResource("2_sxaik")]
 transform = Transform3D(-0.33823296, -0.003126822, 0.49556896, -0.004373256, 0.5999834, 0.00080080965, -0.49555957, -0.003160643, -0.33824646, -1.6314827, 0.76989424, -0.15541023)
@@ -31,3 +33,6 @@ transform = Transform3D(0.0057314737, 0.0040749605, -0.3999382, -0.0009616584, 0
 
 [node name="motel" parent="." instance=ExtResource("6_is8ac")]
 transform = Transform3D(-0.0023299726, 0, 0.2999909, 0, 0.29999995, 0, -0.2999909, 0, -0.0023299726, 18.79953, 0.11199677, 3.5132484)
+
+[node name="Player clavier" parent="." instance=ExtResource("7_olsyl")]
+transform = Transform3D(-0.69981736, 0, 0.01599098, 0, 0.7, 0, -0.01599098, 0, -0.69981736, -6.716013, 0.08740127, 11.671154)
