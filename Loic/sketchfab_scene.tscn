@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://cchmtobhigk5p"]
+
+[ext_resource type="PackedScene" uid="uid://b8oobaw2m2r1g" path="res://Loic/cône orange.glb" id="1_r57si"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_r57si")]
+
+[node name="Object_3" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="0"]
+visible = false
+
+[node name="Object_4" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="1"]
+visible = false
+
+[node name="Object_5" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="2"]
+visible = false
+
+[node name="Object_6" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="3"]
+visible = false
+
+[node name="Object_7" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="4"]
+visible = false
+
+[node name="Object_8" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="5"]
+visible = false
+
+[node name="Object_9" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="6"]
+visible = false
+
+[node name="Object_10" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="7"]
+visible = false
+
+[node name="Object_11" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="8"]
+visible = false
+
+[node name="Object_12" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="9"]
+visible = false
+
+[node name="Object_13" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="10"]
+visible = false
+
+[node name="Object_14" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="11"]
+visible = false
+
+[node name="Object_15" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="12"]
+visible = false
+
+[node name="Object_16" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="13"]
+visible = false
+
+[node name="Object_17" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="14"]
+visible = false
+
+[node name="Object_19" parent="Sketchfab_model/barrier_pack_obj_cleaner_gles/Object_2" index="16"]
+visible = false
