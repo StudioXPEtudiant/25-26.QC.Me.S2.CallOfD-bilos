@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cdk84vj8otxlr" path="res://Loic/sidewalk_8m_long_-_hq.glb" id="9_kwojy"]
 [ext_resource type="PackedScene" uid="uid://14r5lx3iqi6l" path="res://Loic/old_concete_building_pack__lowpoly.glb" id="10_w6ey5"]
 [ext_resource type="PackedScene" uid="uid://c3lh8pv7g46lf" path="res://Loic/roadsign__cones_pack.glb" id="11_m83ba"]
-[ext_resource type="PackedScene" uid="uid://b8oobaw2m2r1g" path="res://Loic/cône orange.glb" id="12_i1xas"]
+[ext_resource type="PackedScene" uid="uid://cchmtobhigk5p" path="res://Loic/sketchfab_scene.tscn" id="12_w6ey5"]
 
 [node name="Node 3D" type="Node3D"]
 
@@ -44,8 +44,8 @@ transform = Transform3D(-2.306092, -1.7243184e-11, -0.0023571802, 1.8662424e-05,
 [node name="vieux batiment" parent="." instance=ExtResource("10_w6ey5")]
 transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, -12.492068, 0, 26.928913)
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("11_m83ba")]
+[node name="barrière" parent="." instance=ExtResource("11_m83ba")]
 transform = Transform3D(-2.4067411, 0, -0.67645884, 0, 2.5, 0, 0.67645884, 0, -2.4067411, -5.5140586, 0, 25.105652)
 
-[node name="Sketchfab_Scene2" parent="." instance=ExtResource("12_i1xas")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.900083, 0, 20.153881)
+[node name="cloture" parent="." instance=ExtResource("12_w6ey5")]
+transform = Transform3D(-0.97751534, 0, -0.21086425, 0, 1, 0, 0.21086425, 0, -0.97751534, -3.6360526, 0, 25.262653)
