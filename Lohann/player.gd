@@ -28,13 +28,13 @@ func _physics_process(delta: float) -> void:
 	var forward = -transform.basis.z
 	var right = transform.basis.x
 
-	if Input.is_action_pressed("move_forward"):
+	if Input.is_action_pressed("Avancer"):
 		direction += forward
-	if Input.is_action_pressed("move_back"):
+	if Input.is_action_pressed("Reculer"):
 		direction -= forward
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed("Gauche"):
 		direction -= right
-	if Input.is_action_pressed("move_right"):
+	if Input.is_action_pressed("Droite"):
 		direction += right
 
 	direction = direction.normalized()
@@ -46,7 +46,7 @@ func _physics_process(delta: float) -> void:
 	# gravité et saut
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-	elif Input.is_action_just_pressed("jump"):
+	elif Input.is_action_just_pressed("Sauter"):
 		velocity.y = jump_velocity
 
 	move_and_slide()

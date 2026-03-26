@@ -1,7 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://466nd6owy55p"]
+[gd_scene load_steps=6 format=3 uid="uid://466nd6owy55p"]
 
-[ext_resource type="Script" uid="uid://cdliw8dj6rofg" path="res://Lohann/clavier.gd" id="1_ldjp6"]
+[ext_resource type="PackedScene" uid="uid://21suelt74kit" path="res://Lohann/Arme.tscn" id="2_2pwnm"]
 [ext_resource type="Script" uid="uid://cws5m6r4u6vw4" path="res://Lohann/player.gd" id="2_ccc66"]
+
+[sub_resource type="GDScript" id="GDScript_wrtkd"]
+script/source = "extends Node3D
+"
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6kpuq"]
 radius = 0.3
@@ -12,8 +16,8 @@ radius = 0.3
 height = 1.7
 
 [node name="Player clavier" type="Node3D"]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.80311954, 0)
-script = ExtResource("1_ldjp6")
+transform = Transform3D(0.6998934, 0, 0.0122166835, 0, 0.7, 0, -0.0122166835, 0, 0.6998934, 0, 0.80311954, 0)
+script = SubResource("GDScript_wrtkd")
 
 [node name="Player" type="CharacterBody3D" parent="."]
 script = ExtResource("2_ccc66")
@@ -29,3 +33,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5462013, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Player/Tête"]
 current = true
+
+[node name="Node3D" parent="." instance=ExtResource("2_2pwnm")]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 0.25, 0.265558, -0.4)
