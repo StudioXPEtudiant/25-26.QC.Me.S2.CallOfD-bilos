@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://466nd6owy55p"]
+[gd_scene load_steps=7 format=3 uid="uid://466nd6owy55p"]
+
+[ext_resource type="Script" uid="uid://cws5m6r4u6vw4" path="res://Lohann/player.gd" id="1_mu7e3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wrtkd"]
 radius = 0.3
@@ -21,6 +23,7 @@ material = SubResource("StandardMaterial3D_mu7e3")
 size = Vector3(1, 1, 3.5)
 
 [node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_mu7e3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_wrtkd")
