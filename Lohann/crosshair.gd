@@ -1,20 +1,37 @@
 extends Control
 
 var color = Color.WHITE
+var gap = 10.0
+var base_gap = 8.0
+var size_line = 10.0
+var thickness = 2.0
+var center_dot = true
 
 func _ready():
-	visible = false
 	size = get_viewport_rect().size
-	queue_redraw()
 
 func set_color(new_color):
-	if color == new_color:
-		return
 	color = new_color
+	queue_redraw()
+
+func add_recoil(amount):
+	gap += amount
+
+func update_gap(target, delta):
+	gap = lerp(gap, target, delta * 12.0)
 	queue_redraw()
 
 func _draw():
 	var center = size / 2
 	
-	draw_line(center + Vector2(-10, 0), center + Vector2(10, 0), color, 2)
-	draw_line(center + Vector2(0, -10), center + Vector2(0, 10), color, 2)
+	draw_line(center + Vector2(-gap - size_line, 0), center + Vector2(-gap, 0), color, thickness)
+	draw_line(center + Vector2(gap, 0), center + Vector2(gap + size_line, 0), color, thickness)
+	draw_line(center + Vector2(0, -gap - size_line), center + Vector2(0, -gap), color, thickness)
+	draw_line(center + Vector2(0, gap), center + Vector2(0, gap + size_line), color, thickness)
+	
+	if center_dot:
+		draw_circle(center, 2.0, color)
+
+func set_gap(new_gap):
+	gap = new_gap
+	queue_redraw()

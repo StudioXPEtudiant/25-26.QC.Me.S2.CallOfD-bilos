@@ -13,8 +13,8 @@ var tracer_active = false
 @onready var raycast = $Head/Camera3D/RayCast3D
 @onready var cam = $Head/Camera3D
 @export var speed: float = 5.0
-@export var mouse_sensitivity: float = 0.0022
-@export var jump_velocity: float = 3.75
+@export var mouse_sensitivity: float = 0.002
+@export var jump_velocity: float = 4
 @export var gravity: float = 9.8
 
 var head: Node3D
@@ -116,7 +116,19 @@ func _process(delta):
 		head.position.y = base_head_y + bob_y
 	else:
 		bob_time = 0.0
-		head.position.y = lerp(head.position.y, base_head_y, delta * 10)
+		head.position.y = lerp(head.position.y, base_head_y, delta * 10.0)
+
+	if crosshair:
+		var target_gap = 10.0
+		
+		if velocity_horizontal > 0:
+			target_gap = 18.0
+		
+		if Input.is_action_pressed("sprint"):
+			target_gap = 24.0
+		
+		crosshair.set_gap(lerp(crosshair.gap, target_gap, delta * 12.0))
+
 
 func shoot():
 	var from = cam.global_transform.origin
@@ -134,6 +146,9 @@ func shoot():
 			var hitmarker = get_tree().get_current_scene().find_child("Hitmarker", true, false)
 			if hitmarker:
 				hitmarker.show_hitmarker()
+
+	if crosshair:
+		crosshair.set_gap(crosshair.gap + 6.0)
 
 	if tracer:
 		tracer.position = Vector3(0.3, -0.3, -5)

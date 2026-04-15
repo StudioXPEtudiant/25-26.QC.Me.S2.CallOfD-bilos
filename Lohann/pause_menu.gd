@@ -1,19 +1,15 @@
 extends CanvasLayer
 
-var paused = false
+func _ready():
+	visible = false
+	process_mode = Node.PROCESS_MODE_ALWAYS
 
-func pause_unpaused():
-	paused = !paused
-
-	if paused:
-		get_tree().paused = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		show()
-	else:
-		get_tree().paused = false
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		hide()
-
-func _input(event):
-	if event.is_action_pressed("pause"):
-		pause_unpaused()
+func _process(delta):
+	if Input.is_action_just_pressed("pause"):
+		visible = !visible
+		get_tree().paused = visible
+		
+		if visible:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmduvtqveld48"]
+[gd_scene load_steps=7 format=3 uid="uid://dmduvtqveld48"]
 
 [ext_resource type="Script" uid="uid://ddhpxr83dwjd8" path="res://script_menu.gd" id="1_lti8b"]
+[ext_resource type="PackedScene" uid="uid://dsxbci36v7k15" path="res://world.tscn" id="2_ouk20"]
 
 [sub_resource type="FontFile" id="FontFile_vsb4k"]
 cache/0/16/0/ascent = 0.0
@@ -62,6 +63,12 @@ cache/0/30/0/scale = 1.0
 
 [node name="Menu" type="CanvasLayer"]
 script = ExtResource("1_lti8b")
+
+[node name="World" parent="." instance=ExtResource("2_ouk20")]
+
+[node name="CameraMenu" type="Camera3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 3)
+current = true
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
