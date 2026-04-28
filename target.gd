@@ -1,8 +1,7 @@
 extends StaticBody3D
 
 func _ready():
-	randomize()
-	rotation.y = randf_range(-0.2, 0.2)
+	rotation = Vector3.ZERO
 
 func hit():
 	var score = get_tree().get_current_scene().find_child("Score", true, false)

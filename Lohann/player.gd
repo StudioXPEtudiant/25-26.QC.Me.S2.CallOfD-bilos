@@ -5,6 +5,7 @@ var bob_time = 0.0
 var bob_amount = 0.05
 var bob_speed = 10.0
 var can_move = false
+
 var tracer_speed = 50
 var tracer_active = false
 
@@ -12,8 +13,9 @@ var tracer_active = false
 @onready var tracer = get_node_or_null("Head/Camera3D/Tracer")
 @onready var raycast = $Head/Camera3D/RayCast3D
 @onready var cam = $Head/Camera3D
+
 @export var speed: float = 5.0
-@export var mouse_sensitivity: float = 0.002
+var mouse_sensitivity := 0.002
 @export var jump_velocity: float = 4
 @export var gravity: float = 9.8
 
@@ -22,39 +24,46 @@ var pitch: float = 0.0
 var crosshair
 
 func _ready():
+	add_to_group("player")
+
+	mouse_sensitivity = Global.sensitivity
 	head = $Head
 	base_head_y = head.position.y
+
 	can_move = get_tree().current_scene.name == "World"
 
-	crosshair = get_tree().get_current_scene().find_child("Crosshair", true, false)
+	crosshair = get_tree().current_scene.find_child("Crosshair", true, false)
 
 	if can_move:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		$Head/Camera3D.current = true
 		if crosshair:
 			crosshair.visible = true
-			crosshair.queue_redraw()
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		$Head/Camera3D.current = false
 		if crosshair:
 			crosshair.visible = false
 
-func _unhandled_input(event) -> void:
+func _on_sens_changed(value):
+	mouse_sensitivity = value
+
+func _unhandled_input(event):
 	if not can_move:
 		return
-	
+
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
-		
+
 		pitch = clamp(
 			pitch - event.relative.y * mouse_sensitivity,
 			deg_to_rad(-89),
 			deg_to_rad(89)
 		)
+
 		head.rotation.x = pitch
 
-func _physics_process(delta: float) -> void:
+func _physics_process(delta):
 	if not can_move:
 		return
 
@@ -91,10 +100,10 @@ func _physics_process(delta: float) -> void:
 func _process(delta):
 	if not can_move:
 		return
-		
+
 	if Input.is_action_just_pressed("click"):
 		shoot()
-	
+
 	var result = raycast.get_collider()
 
 	if crosshair:
@@ -102,33 +111,30 @@ func _process(delta):
 			crosshair.set_color(Color.RED)
 		else:
 			crosshair.set_color(Color.WHITE)
-	
+
 	var velocity_horizontal = Vector3(velocity.x, 0, velocity.z).length()
 
-	var speed_multiplier = 1.0
+	var speed_mult = 1.0
 	if Input.is_action_pressed("sprint"):
-		speed_multiplier = 1.8
+		speed_mult = 1.8
 
 	if velocity_horizontal > 0 and is_on_floor():
-		bob_time += delta * bob_speed * speed_multiplier
-		
-		var bob_y = sin(bob_time) * bob_amount * speed_multiplier
-		head.position.y = base_head_y + bob_y
+		bob_time += delta * bob_speed * speed_mult
+		head.position.y = base_head_y + sin(bob_time) * bob_amount * speed_mult
 	else:
 		bob_time = 0.0
 		head.position.y = lerp(head.position.y, base_head_y, delta * 10.0)
 
 	if crosshair:
 		var target_gap = 10.0
-		
+
 		if velocity_horizontal > 0:
 			target_gap = 18.0
-		
+
 		if Input.is_action_pressed("sprint"):
 			target_gap = 24.0
-		
-		crosshair.set_gap(lerp(crosshair.gap, target_gap, delta * 12.0))
 
+		crosshair.set_gap(lerp(crosshair.gap, target_gap, delta * 12.0))
 
 func shoot():
 	var from = cam.global_transform.origin
@@ -139,13 +145,8 @@ func shoot():
 
 	var result = get_world_3d().direct_space_state.intersect_ray(query)
 
-	if result:
-		if result.collider.has_method("hit"):
-			result.collider.hit()
-			
-			var hitmarker = get_tree().get_current_scene().find_child("Hitmarker", true, false)
-			if hitmarker:
-				hitmarker.show_hitmarker()
+	if result and result.collider.has_method("hit"):
+		result.collider.hit()
 
 	if crosshair:
 		crosshair.set_gap(crosshair.gap + 6.0)
@@ -153,14 +154,12 @@ func shoot():
 	if tracer:
 		tracer.position = Vector3(0.3, -0.3, -5)
 		tracer.visible = true
-		
 		tracer.scale.z = 0.5
-		
-		await get_tree().create_timer(0.02).timeout
-		tracer.scale.z = 3
-		
-		await get_tree().create_timer(0.05).timeout
-		tracer.visible = false
 
-func _on_tracer_timer_timeout() -> void:
-	pass
+		await get_tree().create_timer(0.02).timeout
+
+		tracer.scale.z = 3
+
+		await get_tree().create_timer(0.05).timeout
+
+		tracer.visible = false

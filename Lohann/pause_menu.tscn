@@ -1,9 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://gat5jnmdcbcq"]
+[gd_scene load_steps=4 format=3 uid="uid://gat5jnmdcbcq"]
 
 [ext_resource type="Script" uid="uid://hviex1u7m6s2" path="res://Lohann/pause_menu.gd" id="1_r05sh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hcr35"]
 font_size = 64
+
+[sub_resource type="FontFile" id="FontFile_r05sh"]
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
 [node name="PauseMenu" type="CanvasLayer"]
 script = ExtResource("1_r05sh")
@@ -15,18 +27,39 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.16700001
+anchor_top = 0.22200002
+anchor_right = 0.16700001
+anchor_bottom = 0.22200002
+offset_left = -92.38402
+offset_top = -43.856018
+offset_right = 92.61598
+offset_bottom = 44.143982
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 text = "Pause"
 label_settings = SubResource("LabelSettings_hcr35")
+
+[node name="SettingsButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.13700001
+anchor_top = 0.386
+anchor_right = 0.13700001
+anchor_bottom = 0.386
+offset_left = -57.824005
+offset_top = -25.128006
+offset_right = 57.175995
+offset_bottom = 24.871994
+theme_override_colors/font_pressed_color = Color(1, 0.57254905, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9490196, 0.8117647, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+theme_override_fonts/font = SubResource("FontFile_r05sh")
+theme_override_font_sizes/font_size = 30
+text = "Settings"
+
+[connection signal="pressed" from="Panel/SettingsButton" to="." method="_on_settings_button_pressed"]

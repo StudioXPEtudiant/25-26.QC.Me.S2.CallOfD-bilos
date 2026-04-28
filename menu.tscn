@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmduvtqveld48"]
+[gd_scene load_steps=6 format=3 uid="uid://dmduvtqveld48"]
 
 [ext_resource type="Script" uid="uid://ddhpxr83dwjd8" path="res://script_menu.gd" id="1_lti8b"]
 [ext_resource type="PackedScene" uid="uid://dsxbci36v7k15" path="res://world.tscn" id="2_ouk20"]
@@ -26,28 +26,6 @@ cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
-
-[sub_resource type="FontFile" id="FontFile_ouk20"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/62/0/ascent = 0.0
-cache/0/62/0/descent = 0.0
-cache/0/62/0/underline_position = 0.0
-cache/0/62/0/underline_thickness = 0.0
-cache/0/62/0/scale = 1.0
-cache/0/32/0/ascent = 0.0
-cache/0/32/0/descent = 0.0
-cache/0/32/0/underline_position = 0.0
-cache/0/32/0/underline_thickness = 0.0
-cache/0/32/0/scale = 1.0
-cache/0/30/0/ascent = 0.0
-cache/0/30/0/descent = 0.0
-cache/0/30/0/underline_position = 0.0
-cache/0/30/0/underline_thickness = 0.0
-cache/0/30/0/scale = 1.0
 
 [sub_resource type="FontFile" id="FontFile_mae5d"]
 cache/0/16/0/ascent = 0.0
@@ -121,7 +99,6 @@ size_flags_horizontal = 0
 theme_override_colors/font_pressed_color = Color(1, 0.57254905, 0, 1)
 theme_override_colors/font_hover_color = Color(0.9490196, 0.8117647, 0, 1)
 theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
-theme_override_fonts/font = SubResource("FontFile_ouk20")
 theme_override_font_sizes/font_size = 30
 text = "Settings"
 
@@ -136,4 +113,5 @@ theme_override_font_sizes/font_size = 30
 text = "Quit"
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

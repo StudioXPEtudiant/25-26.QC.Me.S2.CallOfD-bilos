@@ -20,3 +20,8 @@ func _process(delta):
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func _on_settings_button_pressed():
+	var settings = load("res://Settings.tscn").instantiate()
+	get_tree().root.add_child(settings)
+	settings.process_mode = Node.PROCESS_MODE_ALWAYS
