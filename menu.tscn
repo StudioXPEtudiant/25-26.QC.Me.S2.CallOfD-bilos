@@ -14,6 +14,31 @@ cache/0/62/0/descent = 0.0
 cache/0/62/0/underline_position = 0.0
 cache/0/62/0/underline_thickness = 0.0
 cache/0/62/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/5/0/ascent = 0.0
+cache/0/5/0/descent = 0.0
+cache/0/5/0/underline_position = 0.0
+cache/0/5/0/underline_thickness = 0.0
+cache/0/5/0/scale = 1.0
+cache/0/1/0/ascent = 0.0
+cache/0/1/0/descent = 0.0
+cache/0/1/0/underline_position = 0.0
+cache/0/1/0/underline_thickness = 0.0
+cache/0/1/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
 
 [sub_resource type="FontFile" id="FontFile_lti8b"]
 cache/0/30/0/ascent = 0.0
@@ -61,6 +86,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 64
@@ -74,10 +101,12 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+modulate = Color(0.41268682, 0.6494356, 0.6217625, 1)
+self_modulate = Color(0.9250993, 0.64536774, 0.7326066, 1)
 layout_mode = 2
 theme_override_fonts/font = SubResource("FontFile_vsb4k")
-theme_override_font_sizes/font_size = 62
-text = "Call of Déblios"
+theme_override_font_sizes/font_size = 50
+text = "░S░I░L░E░N░T░ ░I░M░P░A░C░T░"
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)
@@ -94,6 +123,7 @@ theme_override_font_sizes/font_size = 30
 text = "Play"
 
 [node name="SettingsButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+modulate = Color(0.9340804, 0.9340805, 0.9340802, 1)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_pressed_color = Color(1, 0.57254905, 0, 1)
