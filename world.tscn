@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dsxbci36v7k15"]
+[gd_scene load_steps=16 format=3 uid="uid://dsxbci36v7k15"]
 
 [ext_resource type="PackedScene" uid="uid://gat5jnmdcbcq" path="res://Lohann/pause_menu.tscn" id="1_036b0"]
 [ext_resource type="Script" uid="uid://d1bb2xpqsvgd6" path="res://hitmarker.gd" id="1_f3sb7"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ci0g8mtdj1crs" path="res://target.tscn" id="5_gbfbk"]
 [ext_resource type="Script" uid="uid://tr2n2ysls4sy" path="res://score.gd" id="7_pkg7o"]
 [ext_resource type="Script" uid="uid://cqmyweapd60hp" path="res://camera_minimap.gd" id="8_gbfbk"]
+[ext_resource type="Script" uid="uid://d4bbmjhpt84cd" path="res://minimap.gd" id="8_ioo17"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gv5m4"]
 albedo_color = Color(0.45882353, 0.7294118, 0.3647059, 1)
@@ -98,3 +99,4 @@ offset_left = -200.0
 offset_bottom = 200.0
 grow_horizontal = 0
 texture = SubResource("ViewportTexture_dwbse")
+script = ExtResource("8_ioo17")
