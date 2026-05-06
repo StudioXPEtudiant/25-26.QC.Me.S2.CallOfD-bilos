@@ -103,7 +103,7 @@ size_flags_vertical = 0
 
 [node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer"]
 modulate = Color(0.74001896, 0.8388023, 0.77290016, 1)
-self_modulate = Color(0.9250993, 0.64536774, 0.7326066, 1)
+self_modulate = Color(0.8901961, 0.92156863, 0.9372549, 1)
 layout_mode = 2
 theme_override_fonts/font = SubResource("FontFile_vsb4k")
 theme_override_font_sizes/font_size = 50
