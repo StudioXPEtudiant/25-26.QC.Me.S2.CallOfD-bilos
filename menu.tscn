@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmduvtqveld48"]
+[gd_scene load_steps=7 format=3 uid="uid://dmduvtqveld48"]
 
 [ext_resource type="Script" uid="uid://ddhpxr83dwjd8" path="res://script_menu.gd" id="1_lti8b"]
 [ext_resource type="PackedScene" uid="uid://dsxbci36v7k15" path="res://world.tscn" id="2_ouk20"]
+[ext_resource type="PackedScene" uid="uid://ral8kk8c6utb" path="res://Loic/ak47.glb" id="3_mae5d"]
 
 [sub_resource type="FontFile" id="FontFile_vsb4k"]
 cache/0/16/0/ascent = 0.0
@@ -101,7 +102,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer"]
-modulate = Color(0.41268682, 0.6494356, 0.6217625, 1)
+modulate = Color(0.74001896, 0.8388023, 0.77290016, 1)
 self_modulate = Color(0.9250993, 0.64536774, 0.7326066, 1)
 layout_mode = 2
 theme_override_fonts/font = SubResource("FontFile_vsb4k")
@@ -141,6 +142,9 @@ theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 theme_override_fonts/font = SubResource("FontFile_mae5d")
 theme_override_font_sizes/font_size = 30
 text = "Quit"
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("3_mae5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1604618, 47450.656, 1.563716)
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
