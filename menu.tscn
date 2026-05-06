@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmduvtqveld48"]
+[gd_scene load_steps=6 format=3 uid="uid://dmduvtqveld48"]
 
 [ext_resource type="Script" uid="uid://ddhpxr83dwjd8" path="res://script_menu.gd" id="1_lti8b"]
 [ext_resource type="PackedScene" uid="uid://dsxbci36v7k15" path="res://world.tscn" id="2_ouk20"]
-[ext_resource type="PackedScene" uid="uid://ral8kk8c6utb" path="res://Loic/ak47.glb" id="3_mae5d"]
 
 [sub_resource type="FontFile" id="FontFile_vsb4k"]
 cache/0/16/0/ascent = 0.0
@@ -52,6 +51,11 @@ cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
 
 [sub_resource type="FontFile" id="FontFile_mae5d"]
 cache/0/16/0/ascent = 0.0
@@ -64,6 +68,11 @@ cache/0/30/0/descent = 0.0
 cache/0/30/0/underline_position = 0.0
 cache/0/30/0/underline_thickness = 0.0
 cache/0/30/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
 
 [node name="Menu" type="CanvasLayer"]
 script = ExtResource("1_lti8b")
@@ -120,17 +129,16 @@ theme_override_colors/font_pressed_color = Color(1, 0.57254905, 0, 1)
 theme_override_colors/font_hover_color = Color(0.9490196, 0.8117647, 0, 1)
 theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 theme_override_fonts/font = SubResource("FontFile_lti8b")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 40
 text = "▶️Play"
 
 [node name="SettingsButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
-modulate = Color(0.9340804, 0.9340805, 0.9340802, 1)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_pressed_color = Color(1, 0.57254905, 0, 1)
 theme_override_colors/font_hover_color = Color(0.9490196, 0.8117647, 0, 1)
 theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 36
 text = "⚙️Settings"
 
 [node name="QuitButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
@@ -140,11 +148,8 @@ theme_override_colors/font_pressed_color = Color(1, 0.57254905, 0, 1)
 theme_override_colors/font_hover_color = Color(0.9490196, 0.8117647, 0, 1)
 theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 theme_override_fonts/font = SubResource("FontFile_mae5d")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 40
 text = "❎Quit"
-
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("3_mae5d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1604618, 47450.656, 1.563716)
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
