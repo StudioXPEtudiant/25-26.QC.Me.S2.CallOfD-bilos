@@ -23,6 +23,9 @@ var base_sensitivity := 0.002
 var ads_multiplier := 0.3
 var target_sensitivity := 0.002
 
+@export var fire_rate: float = 0.1
+var can_shoot := true
+
 var head: Node3D
 var pitch: float = 0.0
 var crosshair
@@ -116,7 +119,7 @@ func _process(delta):
 
 	mouse_sensitivity = lerp(mouse_sensitivity, target_sensitivity, delta * 10.0)
 
-	if Input.is_action_just_pressed("click"):
+	if Input.is_action_pressed("click") and can_shoot:
 		shoot()
 
 	var result = raycast.get_collider()
@@ -142,7 +145,7 @@ func _process(delta):
 
 	if crosshair:
 		if Input.is_action_pressed("aim"):
-			crosshair.set_gap(0)
+			crosshair.set_gap(0.0)
 		else:
 			var target_gap = 10.0
 
@@ -155,6 +158,8 @@ func _process(delta):
 			crosshair.set_gap(lerp(float(crosshair.gap), float(target_gap), delta * 12.0))
 
 func shoot():
+	can_shoot = false
+
 	var from = cam.global_transform.origin
 	var to = from + -cam.global_transform.basis.z * 1000
 
@@ -175,9 +180,9 @@ func shoot():
 		tracer.scale.z = 0.5
 
 		await get_tree().create_timer(0.02).timeout
-
 		tracer.scale.z = 3
-
 		await get_tree().create_timer(0.05).timeout
-
 		tracer.visible = false
+
+	await get_tree().create_timer(fire_rate).timeout
+	can_shoot = true

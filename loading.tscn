@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsr55gbxwr7x"]
+
+[ext_resource type="Texture2D" uid="uid://c5yocur8fxv7x" path="res://Copilot_20260429_191341.png" id="1_gov4d"]
+[ext_resource type="Script" uid="uid://c48uu2muiph80" path="res://loading.gd" id="1_pg7vo"]
+
+[node name="Loading" type="CanvasLayer"]
+script = ExtResource("1_pg7vo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(150, 150)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -512.0
+offset_right = 512.0
+offset_bottom = 512.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_gov4d")
