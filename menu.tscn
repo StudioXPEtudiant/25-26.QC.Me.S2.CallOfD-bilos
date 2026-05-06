@@ -121,7 +121,7 @@ theme_override_colors/font_hover_color = Color(0.9490196, 0.8117647, 0, 1)
 theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 theme_override_fonts/font = SubResource("FontFile_lti8b")
 theme_override_font_sizes/font_size = 30
-text = "Play"
+text = "▶️Play"
 
 [node name="SettingsButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
 modulate = Color(0.9340804, 0.9340805, 0.9340802, 1)
@@ -131,7 +131,7 @@ theme_override_colors/font_pressed_color = Color(1, 0.57254905, 0, 1)
 theme_override_colors/font_hover_color = Color(0.9490196, 0.8117647, 0, 1)
 theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 theme_override_font_sizes/font_size = 30
-text = "Settings"
+text = "⚙️Settings"
 
 [node name="QuitButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -141,7 +141,7 @@ theme_override_colors/font_hover_color = Color(0.9490196, 0.8117647, 0, 1)
 theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 theme_override_fonts/font = SubResource("FontFile_mae5d")
 theme_override_font_sizes/font_size = 30
-text = "Quit"
+text = "❎Quit"
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("3_mae5d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1604618, 47450.656, 1.563716)
