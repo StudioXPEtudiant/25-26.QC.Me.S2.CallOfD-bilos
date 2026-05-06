@@ -25,3 +25,6 @@ func _on_settings_button_pressed():
 	var settings = load("res://Settings.tscn").instantiate()
 	get_tree().root.add_child(settings)
 	settings.process_mode = Node.PROCESS_MODE_ALWAYS
+
+func _on_quit_button_pressed():
+	get_tree().quit()

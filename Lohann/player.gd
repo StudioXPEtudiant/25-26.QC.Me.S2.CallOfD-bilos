@@ -19,6 +19,10 @@ var mouse_sensitivity := 0.002
 @export var jump_velocity: float = 4
 @export var gravity: float = 9.8
 
+var base_sensitivity := 0.002
+var ads_multiplier := 0.3
+var target_sensitivity := 0.002
+
 var head: Node3D
 var pitch: float = 0.0
 var crosshair
@@ -27,6 +31,9 @@ func _ready():
 	add_to_group("player")
 
 	mouse_sensitivity = Global.sensitivity
+	base_sensitivity = Global.sensitivity
+	target_sensitivity = base_sensitivity
+
 	head = $Head
 	base_head_y = head.position.y
 
@@ -47,6 +54,7 @@ func _ready():
 
 func _on_sens_changed(value):
 	mouse_sensitivity = value
+	base_sensitivity = value
 
 func _unhandled_input(event):
 	if not can_move:
@@ -101,6 +109,13 @@ func _process(delta):
 	if not can_move:
 		return
 
+	if Input.is_action_pressed("aim"):
+		target_sensitivity = base_sensitivity * ads_multiplier
+	else:
+		target_sensitivity = base_sensitivity
+
+	mouse_sensitivity = lerp(mouse_sensitivity, target_sensitivity, delta * 10.0)
+
 	if Input.is_action_just_pressed("click"):
 		shoot()
 
@@ -126,15 +141,18 @@ func _process(delta):
 		head.position.y = lerp(head.position.y, base_head_y, delta * 10.0)
 
 	if crosshair:
-		var target_gap = 10.0
+		if Input.is_action_pressed("aim"):
+			crosshair.set_gap(0)
+		else:
+			var target_gap = 10.0
 
-		if velocity_horizontal > 0:
-			target_gap = 18.0
+			if velocity_horizontal > 0:
+				target_gap = 18.0
 
-		if Input.is_action_pressed("sprint"):
-			target_gap = 24.0
+			if Input.is_action_pressed("sprint"):
+				target_gap = 24.0
 
-		crosshair.set_gap(lerp(crosshair.gap, target_gap, delta * 12.0))
+			crosshair.set_gap(lerp(float(crosshair.gap), float(target_gap), delta * 12.0))
 
 func shoot():
 	var from = cam.global_transform.origin
