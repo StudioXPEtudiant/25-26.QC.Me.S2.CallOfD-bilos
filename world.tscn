@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=3 uid="uid://dsxbci36v7k15"]
 
-[ext_resource type="PackedScene" uid="uid://gat5jnmdcbcq" path="res://Lohann/pause_menu.tscn" id="1_036b0"]
+[ext_resource type="PackedScene" uid="uid://gat5jnmdcbcq" path="res://pause_menu.tscn" id="1_036b0"]
 [ext_resource type="Script" uid="uid://d1bb2xpqsvgd6" path="res://hitmarker.gd" id="1_f3sb7"]
-[ext_resource type="PackedScene" uid="uid://b4feeoaymb7xj" path="res://Lohann/crosshair.tscn" id="3_dwbse"]
-[ext_resource type="PackedScene" uid="uid://466nd6owy55p" path="res://Lohann/player.tscn" id="4_pkg7o"]
+[ext_resource type="PackedScene" uid="uid://b4feeoaymb7xj" path="res://crosshair.tscn" id="3_dwbse"]
+[ext_resource type="PackedScene" uid="uid://466nd6owy55p" path="res://player.tscn" id="4_pkg7o"]
 [ext_resource type="PackedScene" uid="uid://ci0g8mtdj1crs" path="res://target.tscn" id="5_gbfbk"]
 [ext_resource type="Script" uid="uid://tr2n2ysls4sy" path="res://score.gd" id="7_pkg7o"]
 [ext_resource type="Script" uid="uid://cqmyweapd60hp" path="res://camera_minimap.gd" id="8_gbfbk"]

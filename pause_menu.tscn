@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://gat5jnmdcbcq"]
 
-[ext_resource type="Script" uid="uid://hviex1u7m6s2" path="res://Lohann/pause_menu.gd" id="1_r05sh"]
+[ext_resource type="Script" uid="uid://hviex1u7m6s2" path="res://pause_menu.gd" id="1_hdmo1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hcr35"]
 font_size = 64
@@ -21,6 +21,9 @@ cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 
 [sub_resource type="FontFile" id="FontFile_fko1n"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/30/0/ascent = 0.0
 cache/0/30/0/descent = 0.0
 cache/0/30/0/underline_position = 0.0
@@ -33,7 +36,7 @@ cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 
 [node name="PauseMenu" type="CanvasLayer"]
-script = ExtResource("1_r05sh")
+script = ExtResource("1_hdmo1")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = 15

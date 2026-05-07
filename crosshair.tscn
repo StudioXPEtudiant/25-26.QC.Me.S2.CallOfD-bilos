@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b4feeoaymb7xj"]
 
-[ext_resource type="Script" uid="uid://7by1axqq0rdo" path="res://Lohann/crosshair.gd" id="1_ssego"]
+[ext_resource type="Script" uid="uid://7by1axqq0rdo" path="res://crosshair.gd" id="1_rtxwy"]
 
 [node name="crosshair" type="CanvasLayer"]
 
@@ -12,4 +12,4 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_ssego")
+script = ExtResource("1_rtxwy")
