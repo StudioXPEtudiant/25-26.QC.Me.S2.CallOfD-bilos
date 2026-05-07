@@ -34,6 +34,11 @@ cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
 
 [node name="PauseMenu" type="CanvasLayer"]
 script = ExtResource("1_hdmo1")
@@ -58,7 +63,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Pause"
+text = "⏸️Break"
 label_settings = SubResource("LabelSettings_hcr35")
 
 [node name="SettingsButton" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
@@ -68,16 +73,28 @@ theme_override_colors/font_hover_color = Color(0.9490196, 0.8117647, 0, 1)
 theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 theme_override_fonts/font = SubResource("FontFile_r05sh")
 theme_override_font_sizes/font_size = 30
-text = "Settings"
+text = "⚙️Settings"
 
-[node name="QuitButton" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+[node name="LanguageButton" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_pressed_color = Color(1, 0.57254905, 0, 1)
 theme_override_colors/font_hover_color = Color(0.9490196, 0.8117647, 0, 1)
 theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 theme_override_fonts/font = SubResource("FontFile_fko1n")
 theme_override_font_sizes/font_size = 30
-text = "Quit"
+text = "🗣️Language"
+
+[node name="BacktomenuButton" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8175209, 0.8175214, 0.8175209, 1)
+theme_override_font_sizes/font_size = 26
+text = "🔙Back to menu"
+
+[node name="QuitButton" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.81325716, 0.8132579, 0.81325734, 1)
+theme_override_font_sizes/font_size = 26
+text = "❎Quit"
 
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
