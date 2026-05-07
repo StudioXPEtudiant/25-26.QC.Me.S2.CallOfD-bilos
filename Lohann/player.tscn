@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cws5m6r4u6vw4" path="res://Lohann/player.gd" id="1_mu7e3"]
 [ext_resource type="PackedScene" uid="uid://ral8kk8c6utb" path="res://Loic/ak47.glb" id="2_6yr3n"]
+[ext_resource type="PackedScene" uid="uid://d15v6wjc12wie" path="res://Loic/arm.glb" id="3_o3ie2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wrtkd"]
 radius = 0.3
@@ -10,8 +11,6 @@ height = 1.7
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ldjp6"]
 radius = 0.3
 height = 1.7
-
-[sub_resource type="BoxMesh" id="BoxMesh_u6nf1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mu7e3"]
 albedo_color = Color(1, 1, 0.08235294, 1)
@@ -38,11 +37,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.598, 0)
 [node name="Camera3D" type="Camera3D" parent="Head"]
 current = true
 
-[node name="Arme" type="MeshInstance3D" parent="Head/Camera3D"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.4, 0.3, -0.3, -0.4)
-visible = false
-mesh = SubResource("BoxMesh_u6nf1")
-
 [node name="Tracer" type="MeshInstance3D" parent="Head/Camera3D"]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 4, 0, 0, 2)
 visible = false
@@ -51,5 +45,8 @@ mesh = SubResource("BoxMesh_6yr3n")
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
 target_position = Vector3(0, 0, -100)
 
-[node name="Sketchfab_Scene" parent="Head/Camera3D" instance=ExtResource("2_6yr3n")]
-transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0.3, -0.36105138, -0.51112723)
+[node name="AK47" parent="Head/Camera3D" instance=ExtResource("2_6yr3n")]
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0.3, -0.2856313, -0.51112723)
+
+[node name="main" parent="Head" instance=ExtResource("3_o3ie2")]
+transform = Transform3D(0.021787146, -0.06770063, -0.29144806, 0.29163715, 0.07012377, 0.0055121994, 0.06688084, -0.28372398, 0.07090608, -0.43931937, -0.36174753, -0.13838005)
