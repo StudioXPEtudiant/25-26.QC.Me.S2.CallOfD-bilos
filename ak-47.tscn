@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://tdn2cftsc2ec"]
+
+[ext_resource type="PackedScene" uid="uid://ral8kk8c6utb" path="res://Loic/ak47.glb" id="1_spcq3"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_spcq3")]
+
+[node name="Skeleton3D" parent="Sketchfab_model/e84f55d620844ede9dd2e4a82eb29925_fbx/Object_2/RootNode/Armature_003/Object_5" index="0"]
+bones/1/rotation = Quaternion(1, 6.678134e-15, 7.54979e-08, -1.3315805e-07)
+bones/2/position = Vector3(-2.7372997, 5.053578, 7.211851)
+bones/2/rotation = Quaternion(0.70710695, -7.009384e-08, 5.889859e-08, 0.7071066)
+bones/4/position = Vector3(9.685755e-08, -1.3646134, -0.3273056)
+bones/4/rotation = Quaternion(0.70710695, -5.9557127e-08, 5.3465598e-08, 0.7071066)
+bones/6/position = Vector3(4.8428774e-08, -1.8681612, -0.614327)
+bones/8/position = Vector3(5.2154064e-08, -1.709828, -0.2837874)
+bones/8/rotation = Quaternion(-3.49246e-10, 7.4825955e-08, 3.3760448e-09, 1)
+bones/10/position = Vector3(0.051157802, -2.624658, -0.60362655)
+bones/10/rotation = Quaternion(-7.67177e-08, -1.2724195e-07, -1.8335413e-09, 1)

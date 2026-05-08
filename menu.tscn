@@ -4,43 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dsxbci36v7k15" path="res://world.tscn" id="2_ouk20"]
 [ext_resource type="Texture2D" uid="uid://sxwkhh6wp6uw" path="res://905eac31-c941-4e99-a71a-30cc713c13de.png" id="3_mae5d"]
 
-[sub_resource type="FontFile" id="FontFile_vsb4k"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/62/0/ascent = 0.0
-cache/0/62/0/descent = 0.0
-cache/0/62/0/underline_position = 0.0
-cache/0/62/0/underline_thickness = 0.0
-cache/0/62/0/scale = 1.0
-cache/0/30/0/ascent = 0.0
-cache/0/30/0/descent = 0.0
-cache/0/30/0/underline_position = 0.0
-cache/0/30/0/underline_thickness = 0.0
-cache/0/30/0/scale = 1.0
-cache/0/40/0/ascent = 0.0
-cache/0/40/0/descent = 0.0
-cache/0/40/0/underline_position = 0.0
-cache/0/40/0/underline_thickness = 0.0
-cache/0/40/0/scale = 1.0
-cache/0/5/0/ascent = 0.0
-cache/0/5/0/descent = 0.0
-cache/0/5/0/underline_position = 0.0
-cache/0/5/0/underline_thickness = 0.0
-cache/0/5/0/scale = 1.0
-cache/0/1/0/ascent = 0.0
-cache/0/1/0/descent = 0.0
-cache/0/1/0/underline_position = 0.0
-cache/0/1/0/underline_thickness = 0.0
-cache/0/1/0/scale = 1.0
-cache/0/50/0/ascent = 0.0
-cache/0/50/0/descent = 0.0
-cache/0/50/0/underline_position = 0.0
-cache/0/50/0/underline_thickness = 0.0
-cache/0/50/0/scale = 1.0
-
 [sub_resource type="FontFile" id="FontFile_lti8b"]
 cache/0/30/0/ascent = 0.0
 cache/0/30/0/descent = 0.0
@@ -81,7 +44,7 @@ script = ExtResource("1_lti8b")
 [node name="World" parent="." instance=ExtResource("2_ouk20")]
 
 [node name="CameraMenu" type="Camera3D" parent="World"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 3)
+transform = Transform3D(-0.8960839, 0.15482017, 0.41601005, -3.0491726e-08, 0.9372029, -0.34878471, -0.4438847, -0.31254038, -0.8398124, 0.1059767, 1.115842, 0.64766204)
 current = true
 
 [node name="Control" type="Control" parent="."]

@@ -175,7 +175,7 @@ func shoot():
 		crosshair.set_gap(crosshair.gap + 6.0)
 
 	if tracer:
-		tracer.position = Vector3(0.3, -0.3, -5)
+		tracer.position = Vector3(0.3, -0.220, -5)
 		tracer.visible = true
 		tracer.scale.z = 0.5
 
