@@ -92,6 +92,7 @@ size = 20.0
 script = ExtResource("8_gbfbk")
 
 [node name="MiniMapUI" type="TextureRect" parent="."]
+visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -100,3 +101,15 @@ offset_bottom = 200.0
 grow_horizontal = 0
 texture = SubResource("ViewportTexture_dwbse")
 script = ExtResource("8_ioo17")
+
+[node name="AmmoLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.13000001
+anchor_top = 0.883
+anchor_right = 0.13000001
+anchor_bottom = 0.883
+offset_left = -49.76001
+offset_top = -27.184021
+offset_right = 50.23999
+offset_bottom = 27.815979
+theme_override_font_sizes/font_size = 40

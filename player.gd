@@ -5,6 +5,7 @@ var bob_time = 0.0
 var bob_amount = 0.05
 var bob_speed = 10.0
 var can_move = false
+var ammo_label
 
 var tracer_speed = 50
 var tracer_active = false
@@ -26,12 +27,20 @@ var target_sensitivity := 0.002
 @export var fire_rate: float = 0.1
 var can_shoot := true
 
+var max_ammo := 30
+var ammo := 30
+
+var reloading := false
+var reload_time := 1.5
+var reload_progress := 0.0
+
 var head: Node3D
 var pitch: float = 0.0
 var crosshair
 
 func _ready():
 	add_to_group("player")
+	ammo_label = get_tree().current_scene.find_child("AmmoLabel", true, false)
 
 	mouse_sensitivity = Global.sensitivity
 	base_sensitivity = Global.sensitivity
@@ -112,6 +121,9 @@ func _process(delta):
 	if not can_move:
 		return
 
+	if ammo_label:
+		ammo_label.text = str(ammo) + "/" + str(max_ammo)
+
 	if Input.is_action_pressed("aim"):
 		target_sensitivity = base_sensitivity * ads_multiplier
 	else:
@@ -119,12 +131,22 @@ func _process(delta):
 
 	mouse_sensitivity = lerp(mouse_sensitivity, target_sensitivity, delta * 10.0)
 
-	if Input.is_action_pressed("click") and can_shoot:
+	if Input.is_action_pressed("click") and can_shoot and ammo > 0 and not reloading:
 		shoot()
+
+	if Input.is_action_just_pressed("reload") and ammo < max_ammo and not reloading:
+		start_reload()
+
+	if reloading:
+		reload_progress += delta
 
 	var result = raycast.get_collider()
 
 	if crosshair:
+		crosshair.reloading = reloading
+		crosshair.reload_progress = reload_progress / reload_time
+		crosshair.queue_redraw()
+
 		if result and result.has_method("hit"):
 			crosshair.set_color(Color.RED)
 		else:
@@ -159,6 +181,7 @@ func _process(delta):
 
 func shoot():
 	can_shoot = false
+	ammo -= 1
 
 	var from = cam.global_transform.origin
 	var to = from + -cam.global_transform.basis.z * 1000
@@ -175,7 +198,7 @@ func shoot():
 		crosshair.set_gap(crosshair.gap + 6.0)
 
 	if tracer:
-		tracer.position = Vector3(0.3, -0.220, -5)
+		tracer.position = Vector3(0.3, -0.225, -5)
 		tracer.visible = true
 		tracer.scale.z = 0.5
 
@@ -184,5 +207,17 @@ func shoot():
 		await get_tree().create_timer(0.05).timeout
 		tracer.visible = false
 
+	if ammo <= 0:
+		start_reload()
+
 	await get_tree().create_timer(fire_rate).timeout
 	can_shoot = true
+
+func start_reload():
+	reloading = true
+	reload_progress = 0.0
+
+	await get_tree().create_timer(reload_time).timeout
+
+	ammo = max_ammo
+	reloading = false

@@ -106,7 +106,7 @@ theme_override_colors/font_pressed_color = Color(1, 0.57254905, 0, 1)
 theme_override_colors/font_hover_color = Color(0.9490196, 0.8117647, 0, 1)
 theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 theme_override_font_sizes/font_size = 36
-text = "⚙️Settings"
+text = "Settings"
 
 [node name="QuitButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -116,7 +116,7 @@ theme_override_colors/font_hover_color = Color(0.9490196, 0.8117647, 0, 1)
 theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 theme_override_fonts/font = SubResource("FontFile_mae5d")
 theme_override_font_sizes/font_size = 40
-text = "❎Quit"
+text = "Quit"
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
