@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://466nd6owy55p"]
+[gd_scene load_steps=10 format=3 uid="uid://466nd6owy55p"]
 
 [ext_resource type="Script" uid="uid://cws5m6r4u6vw4" path="res://player.gd" id="1_mu7e3"]
 [ext_resource type="PackedScene" uid="uid://21suelt74kit" path="res://Arme.tscn" id="3_hqtel"]
 [ext_resource type="PackedScene" uid="uid://d15v6wjc12wie" path="res://Loic/arm.glb" id="3_o3ie2"]
+[ext_resource type="PackedScene" uid="uid://dcag3awcryk58" path="res://Loic/coupe_dinstruction_de_pistolet_automatique.glb" id="4_hqtel"]
+[ext_resource type="PackedScene" uid="uid://bxgcgn4coec0y" path="res://Loic/sniper.glb" id="5_sweqy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wrtkd"]
 radius = 0.3
@@ -45,6 +47,7 @@ mesh = SubResource("BoxMesh_6yr3n")
 
 [node name="FX-05" parent="Head/Camera3D" instance=ExtResource("3_hqtel")]
 transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 0.289, -0.3, -0.657)
+visible = false
 skeleton = NodePath("../..")
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
@@ -52,3 +55,10 @@ target_position = Vector3(0, 0, -100)
 
 [node name="Main" parent="Head/Camera3D" instance=ExtResource("3_o3ie2")]
 transform = Transform3D(0.021787146, -0.06770063, -0.29144806, 0.29163715, 0.07012377, 0.0055121994, 0.06688084, -0.28372398, 0.07090608, -0.439, -0.411, -0.12)
+
+[node name="Pistolet" parent="Head/Camera3D" instance=ExtResource("4_hqtel")]
+transform = Transform3D(0.00011889159, 0, -0.0019964632, 0, 0.002, 0, 0.0019964632, 0, 0.00011889159, 0.29700992, -0.3886607, -0.52089405)
+visible = false
+
+[node name="Sniper" parent="Head/Camera3D" instance=ExtResource("5_sweqy")]
+transform = Transform3D(-0.008999999, 0, -7.868049e-10, 0, 0.008999999, 0, 7.868049e-10, 0, -0.008999999, 0.28103405, -0.35405925, -0.5129714)
