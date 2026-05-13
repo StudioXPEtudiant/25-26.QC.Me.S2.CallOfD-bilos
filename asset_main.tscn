@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://jjrbwh6yp8lg"]
+
+[ext_resource type="PackedScene" uid="uid://d15v6wjc12wie" path="res://Loic/arm.glb" id="1_gi3g5"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_gi3g5")]
+
+[node name="defaultMaterial" parent="Sketchfab_model/Collada visual scene group/Group2" index="0"]
+cast_shadow = 0

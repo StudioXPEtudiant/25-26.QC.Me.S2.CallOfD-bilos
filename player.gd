@@ -65,8 +65,8 @@ func _ready():
 			crosshair.visible = false
 
 func _on_sens_changed(value):
-	mouse_sensitivity = value
-	base_sensitivity = value
+	mouse_sensitivity = Global.sensitivity
+	base_sensitivity = Global.sensitivity
 
 func _unhandled_input(event):
 	if not can_move:

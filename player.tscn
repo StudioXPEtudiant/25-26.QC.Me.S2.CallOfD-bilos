@@ -29,6 +29,7 @@ script = ExtResource("1_mu7e3")
 shape = SubResource("CapsuleShape3D_wrtkd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+cast_shadow = 0
 mesh = SubResource("CapsuleMesh_ldjp6")
 
 [node name="Head" type="Node3D" parent="."]
@@ -50,4 +51,4 @@ skeleton = NodePath("../..")
 target_position = Vector3(0, 0, -100)
 
 [node name="Main" parent="Head/Camera3D" instance=ExtResource("3_o3ie2")]
-transform = Transform3D(0.021787146, -0.06770063, -0.29144806, 0.29163715, 0.07012377, 0.0055121994, 0.06688084, -0.28372398, 0.07090608, -0.439, -0.41118273, -0.12)
+transform = Transform3D(0.021787146, -0.06770063, -0.29144806, 0.29163715, 0.07012377, 0.0055121994, 0.06688084, -0.28372398, 0.07090608, -0.439, -0.411, -0.12)
