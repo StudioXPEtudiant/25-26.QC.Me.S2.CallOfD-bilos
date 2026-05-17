@@ -242,7 +242,7 @@ func shoot():
 		tracer.position = Vector3(
 	0.3,
 	weapons[current_weapon]["tracer_y"],
-	-5
+	-6
 	)
 		tracer.visible = true
 		tracer.scale.z = 0.5

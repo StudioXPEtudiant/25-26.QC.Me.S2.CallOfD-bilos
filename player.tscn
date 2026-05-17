@@ -41,7 +41,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.598, 0)
 current = true
 
 [node name="Tracer" type="MeshInstance3D" parent="Head/Camera3D"]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 4, 0, 0, 2)
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 4, 0, 0, 0)
 visible = false
 mesh = SubResource("BoxMesh_6yr3n")
 

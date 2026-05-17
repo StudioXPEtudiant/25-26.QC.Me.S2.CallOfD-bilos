@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Call of Débilos"
+config/name="Silent Impact"
 run/main_scene="uid://dmduvtqveld48"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
