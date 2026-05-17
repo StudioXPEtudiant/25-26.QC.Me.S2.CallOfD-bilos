@@ -38,9 +38,37 @@ var head: Node3D
 var pitch: float = 0.0
 var crosshair
 
+@onready var fx05 = $Head/Camera3D/FX05
+@onready var pistol = $Head/Camera3D/Pistol
+@onready var sniper = $Head/Camera3D/Sniper
+
+var current_weapon = "fx05"
+
+var weapons = {
+	"fx05": {
+		"fire_rate": 0.09,
+		"max_ammo": 30,
+		"ammo": 30,
+		"tracer_y": -0.225
+	},
+	"pistol": {
+		"fire_rate": 0.2,
+		"max_ammo": 12,
+		"ammo": 12,
+		"tracer_y": -0.28
+	},
+	"sniper": {
+		"fire_rate": 1.0,
+		"max_ammo": 5,
+		"ammo": 5,
+		"tracer_y": -0.25
+	}
+}
+
 func _ready():
 	add_to_group("player")
 	ammo_label = get_tree().current_scene.find_child("AmmoLabel", true, false)
+	equip_weapon("fx05")
 
 	mouse_sensitivity = Global.sensitivity
 	base_sensitivity = Global.sensitivity
@@ -122,7 +150,11 @@ func _process(delta):
 		return
 
 	if ammo_label:
-		ammo_label.text = str(ammo) + "/" + str(max_ammo)
+		ammo_label.text = str(
+			weapons[current_weapon]["ammo"]
+	) + "/" + str(
+		weapons[current_weapon]["max_ammo"]
+	)
 
 	if Input.is_action_pressed("aim"):
 		target_sensitivity = base_sensitivity * ads_multiplier
@@ -131,10 +163,10 @@ func _process(delta):
 
 	mouse_sensitivity = lerp(mouse_sensitivity, target_sensitivity, delta * 10.0)
 
-	if Input.is_action_pressed("click") and can_shoot and ammo > 0 and not reloading:
+	if Input.is_action_pressed("click") and can_shoot and weapons[current_weapon]["ammo"] > 0 and not reloading:
 		shoot()
 
-	if Input.is_action_just_pressed("reload") and ammo < max_ammo and not reloading:
+	if Input.is_action_just_pressed("reload") and weapons[current_weapon]["ammo"] < weapons[current_weapon]["max_ammo"] and not reloading:
 		start_reload()
 
 	if reloading:
@@ -179,9 +211,18 @@ func _process(delta):
 
 			crosshair.set_gap(lerp(float(crosshair.gap), float(target_gap), delta * 12.0))
 
+	if Input.is_action_just_pressed("weapon1"):
+		equip_weapon("fx05")
+
+	if Input.is_action_just_pressed("weapon2"):
+		equip_weapon("pistol")
+
+	if Input.is_action_just_pressed("weapon3"):
+		equip_weapon("sniper")
+
 func shoot():
 	can_shoot = false
-	ammo -= 1
+	weapons[current_weapon]["ammo"] -= 1
 
 	var from = cam.global_transform.origin
 	var to = from + -cam.global_transform.basis.z * 1000
@@ -198,7 +239,11 @@ func shoot():
 		crosshair.set_gap(crosshair.gap + 6.0)
 
 	if tracer:
-		tracer.position = Vector3(0.3, -0.225, -5)
+		tracer.position = Vector3(
+	0.3,
+	weapons[current_weapon]["tracer_y"],
+	-5
+	)
 		tracer.visible = true
 		tracer.scale.z = 0.5
 
@@ -207,7 +252,7 @@ func shoot():
 		await get_tree().create_timer(0.05).timeout
 		tracer.visible = false
 
-	if ammo <= 0:
+	if weapons[current_weapon]["ammo"] <= 0:
 		start_reload()
 
 	await get_tree().create_timer(fire_rate).timeout
@@ -219,5 +264,24 @@ func start_reload():
 
 	await get_tree().create_timer(reload_time).timeout
 
-	ammo = max_ammo
+	weapons[current_weapon]["ammo"] = weapons[current_weapon]["max_ammo"]
+
 	reloading = false
+
+func equip_weapon(name):
+	current_weapon = name
+
+	fx05.visible = false
+	pistol.visible = false
+	sniper.visible = false
+
+	match name:
+		"fx05":
+			fx05.visible = true
+		"pistol":
+			pistol.visible = true
+		"sniper":
+			sniper.visible = true
+
+	fire_rate = weapons[name]["fire_rate"]
+	max_ammo = weapons[name]["max_ammo"]
